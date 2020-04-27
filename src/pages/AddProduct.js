@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {  Row, Col, Button } from "antd";
+import NumberFormat from 'react-number-format';
 import history from "../utils/history";
 import ProductInput from "./components/ProductInput";
 
@@ -185,6 +186,11 @@ class AddProduct extends Component {
                 value={saleOff}
                 handleOnChange={this.handleOnChange}
               />
+          <Col span={2}></Col>
+          <Col span={11}>
+            <div>Test Number format</div>
+          <NumberFormat thousandSeparator={true} prefix={''} style={{width: '100%', border: "1px solid #d9d9d9", lineHeight: "1.5715", padding: "4px 11px"}}/>
+          </Col>
           </Row>
         </div>
         <div className="mt-3"></div>
